@@ -1,3 +1,4 @@
+import axios from 'axios';
 /**
  * A utility function to make a network api call
  *
@@ -5,5 +6,6 @@
  * @return {Promise<Object>}
  */
 export async function request(apiUrl) {
-  return apiUrl;
+  const res = await axios.get(apiUrl);
+  return res;
 }
