@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import VehicleList from '..';
 import useData from '../useData';
+import mockup from '../../../mockups/index.json';
 
 jest.mock('../useData');
 
@@ -25,7 +26,7 @@ describe('<VehicleList /> Tests', () => {
   });
 
   it('Should show results if loading successfully finished', () => {
-    useData.mockReturnValue([false, false, 'results']);
+    useData.mockReturnValue([false, false, mockup.vehicles]);
     const { queryByTestId } = render(<VehicleList />);
 
     expect(queryByTestId('loading')).toBeNull();
