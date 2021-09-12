@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    position: relative;
+    margin-top: auto;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    background-color: #9e1b32;
+    span {
+        color: #ffffff;
+        a {
+            color: inherit;
+        }
+    }
+}
