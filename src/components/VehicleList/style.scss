@@ -1,3 +1,81 @@
-.VehicleList {
-  width: 100%;
+.results-wrapper {
+    .vehicle-details {
+        display: flex;
+        img {
+            width: 40%;
+            height: fit-content;
+        }
+        .details {
+            flex: 1;
+            border-bottom: 0.5px solid rgb(196, 196, 196);
+            h2 {
+                font-size: 12px;
+                text-align: center;
+                letter-spacing: 1px;
+                width: fit-content;
+                margin-top: 8px;
+                padding-left: 20px;
+            }
+            .price-wrapper {
+                font-size: 11px;
+                letter-spacing: 1px;
+                margin-top: 1px;
+                padding-left: 20px;
+            }
+            .details-wrapper {
+                font-size: 10px;
+                margin-top: 5px;
+                padding-left: 20px;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .results-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        .vehicle-details {
+            display: block;
+            flex-basis: 50%;
+            img {
+                width: 100%;
+            }
+            .details {
+                border-bottom: none;
+                h2 {
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-top: 25px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 4px 0;
+                    border-top: 1.5pt solid rgb(68, 67, 67);
+                    border-bottom: 1.5pt solid rgb(68, 67, 67);
+                }
+                .price-wrapper {
+                    font-size: 18px;
+                    text-align: center;
+                    margin-top: 15px;
+                    padding: 0;
+                }
+                .details-wrapper {
+                    text-align: center;
+                    font-size: 18px;
+                    width: 60%;
+                    margin: 10px auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .results-wrapper {
+        .vehicle-details {
+            flex: 1;
+        }
+    }
 }
